@@ -21,3 +21,22 @@ describe ('.newNote', () => {
     }]);
   });
 })
+
+describe ('.display', () => {
+  it('displays a new note in a list',() => {
+    notepad = new Notes();
+    let note1 = {
+      "title": "Groceries list",
+      "content": "Tomatoes, yoghurt, honey, milk"
+    };
+    notepad.newNote(note1);
+    expect(notepad.display()).toEqual("Groceries list: Tomatoes, yoghurt, honey, milk");
+  });
+})
+
+
+
+
+
+
+
