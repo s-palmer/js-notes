@@ -8,7 +8,8 @@ const noteCreate = (content) => {
 })
   .then(response => response.json())
   .then(response => {
-    //callback goes here
+    console.log(response);
+    // callback(response)
   });
 }
 
