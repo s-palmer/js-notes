@@ -2,7 +2,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "jest": "^27.3.1"
+    "jest": "^27.3.1",
+    "jq": "^1.7.2"
   },
   "name": "js-notes",
   "description": "",
