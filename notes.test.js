@@ -30,7 +30,7 @@ describe ('.display', () => {
       "content": "Tomatoes, yoghurt, honey, milk"
     };
     notepad.newNote(note1);
-    expect(notepad.display()).toEqual("Groceries list: Tomatoes, yoghurt, honey, milk");
+    expect(notepad.display()).toEqual([{"content": "Tomatoes, yoghurt, honey, milk", "title": "Groceries list"}]);
   });
 })
 

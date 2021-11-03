@@ -9,7 +9,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "esbuild index.js --bundle --outfile=bundle.js --watch"
   },
   "repository": {
     "type": "git",

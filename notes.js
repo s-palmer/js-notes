@@ -7,15 +7,15 @@ class Notes {
     this.notes.push(note);
   }
 
+  //   display() {
+  //   for (let i=0; i<this.notes.length; i++){
+  //     return `${this.notes[i].title}: ${this.notes[i].content}`
+  //   }
+  //  }
+
   display() {
-  //   this.notes.forEach(x =>
-  //      {console.log(x.title)}
-  //   );
-  let i=0;
-  for (i; i<this.notes.length; i++){
-    return `${this.notes[i].title}: ${this.notes[i].content}`
+    return this.notes;
   }
- }
 }
 
-module.exports = Notes
+module.exports = Notes;
