@@ -4,7 +4,7 @@ const getNotes = require('./src/getNotes');
 
 const input = document.querySelector('#noteInput');
 const createbtn = document.querySelector('#noteCreate');
-const displaybtn = document.querySelector('#noteDisplay');
+// const displaybtn = document.querySelector('#noteDisplay');
 
 getNotes(displayNotes);
 
@@ -17,4 +17,3 @@ createbtn.addEventListener('click', () => {
 // displaybtn.addEventListener('click', () => {
 //   getNotes(displayNotes);
 // })
-

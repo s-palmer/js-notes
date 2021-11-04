@@ -11,11 +11,17 @@ app.use(express.static("./"));
 
 app.get('/', function (req, res) {
   // res.send('Please visit /notes and do not panic.')
-  res.render('index.html')
+  res.render('index.html');
+  // res.sendFile('index.html', {root : __dirname});
 })
 
 app.get('/notes', function (req, res) {
   res.send(notePad.display());
+})
+
+app.get('/notes/all', function (req, res) {
+  // res.render('notes.html');
+  res.sendFile('notes.html', {root : __dirname});
 })
 
 app.post('/notes', function (req, res) {
