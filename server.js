@@ -19,15 +19,13 @@ app.get('/notes', function (req, res) {
 })
 
 app.get('/notes/all', function (req, res) {
-  // res.render('notes.html');
   res.sendFile('notes.html', {root : __dirname + '/public'});
 })
 
 app.get('/note/:noteId', function (req, res) {
   res.send(notePad.findNote(req.params.noteId).content);
   console.log(req.params);
-  // res.send("noteId is set to " + req.params.noteId);
-  // res.send(req.params);
+  console.log("noteId is set to " + req.params.noteId);
   // res.sendFile('displayNote.html', {root : __dirname + '/public'});
 })
 
