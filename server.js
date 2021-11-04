@@ -23,6 +23,14 @@ app.get('/notes/all', function (req, res) {
   res.sendFile('notes.html', {root : __dirname + '/public'});
 })
 
+app.get('/note/:noteId', function (req, res) {
+  res.send(notePad.findNote(req.params.noteId).content);
+  console.log(req.params);
+  // res.send("noteId is set to " + req.params.noteId);
+  // res.send(req.params);
+  // res.sendFile('displayNote.html', {root : __dirname + '/public'});
+})
+
 app.post('/notes', function (req, res) {
   res.json(req.body);
   notePad.newNote(req.body);

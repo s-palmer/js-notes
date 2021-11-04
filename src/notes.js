@@ -17,6 +17,10 @@ class Notes {
   display() {
     return this.notes;
   }
+
+  findNote(id) {
+    return this.notes[id];
+  }
 }
 
 module.exports = Notes;

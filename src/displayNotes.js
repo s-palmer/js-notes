@@ -8,10 +8,6 @@ const displayNotes = (fetchedContent) => {
     let noteContent = object["content"];
     newA.href = `/note/${postCount}`;
     newA.id = `a-note-${postCount + 1}`;
-    // if (noteContent.length > 20)
-    //   newNote.textContent = '* ' + noteContent.slice(0, 20) + '...';
-    // else
-    //   newNote.textContent = '* ' + object["content"];
     if (noteContent.length > 20)
       newA.textContent = "* " + noteContent.slice(0, 20) + "...";
     else newA.textContent = "* " + object["content"];
