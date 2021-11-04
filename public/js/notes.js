@@ -58,16 +58,9 @@
     }
   });
 
-  // index.js
-  var noteCreate = require_noteCreate();
+
+  
   var displayNotes = require_displayNotes();
   var getNotes = require_getNotes();
-  var input = document.querySelector("#noteInput");
-  var createbtn = document.querySelector("#noteCreate");
   getNotes(displayNotes);
-  createbtn.addEventListener("click", () => {
-    noteCreate(input.value);
-    getNotes(displayNotes);
-    input.value = "";
-  });
 })();

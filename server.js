@@ -1,18 +1,17 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 const port = 3000;
 const Notes = require('./src/notes')
 const notePad =  new Notes();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("./"));
+app.use("/public", express.static(__dirname + "/public"));
 
 app.get('/', function (req, res) {
-  // res.send('Please visit /notes and do not panic.')
-  res.render('index.html');
-  // res.sendFile('index.html', {root : __dirname});
+  res.sendFile('index.html', {root : __dirname + '/public'});
 })
 
 app.get('/notes', function (req, res) {
@@ -21,7 +20,7 @@ app.get('/notes', function (req, res) {
 
 app.get('/notes/all', function (req, res) {
   // res.render('notes.html');
-  res.sendFile('notes.html', {root : __dirname});
+  res.sendFile('notes.html', {root : __dirname + '/public'});
 })
 
 app.post('/notes', function (req, res) {

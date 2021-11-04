@@ -9,24 +9,22 @@
   <body>
     <h1>Notes</h1>
     <div id="formBody">
-      <label for="noteInput">Note Title:</label>
-      <input id="noteInput" type="text" />
-      <label for="noteInputContent">Note Content:</label>
-      <input id="noteInputContent" type="text" />
+      <label for="noteInput">Note Content:</label>
+      <input id="noteInput" type="text" size="50"/>
+      <!-- <label for="noteInputContent">Note Content:</label>
+      <input id="noteInputContent" type="text" /> -->
       <p>
         <button id="noteCreate">Create</button>
       </p>
-      <form action="/notes/all">
+
+      <!-- <form action="/notes/all">
         <p>
           <button id="viewAllNotes">View All Notes</button>
         </p>
-      </form>
+      </form> -->
 
-      <!-- <p>
-      <button id='noteDisplay'>Display</button>
-    </p> -->
       <div id="displayNotes"></div>
     </div>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="/public/js/bundle.js"></script>
   </body>
 </html>
