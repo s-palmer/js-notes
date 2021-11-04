@@ -5,8 +5,10 @@ const displayNotes = (fetchedContent) => {
   noteEl.innerHTML = "";
   fetchedContent.forEach((object) => {
     let newNote = document.createElement("p");
-    newNote.textContent = object["content"];
-    newNote.className = "newNote";
+    let postCount = document.querySelectorAll('.note').length;
+    newNote.textContent = '* ' + object["content"];
+    newNote.className = "note";
+    newNote.id = `note-${postCount + 1}`;
     noteEl = document.getElementById("displayNotes");
     noteEl.appendChild(newNote);
   });

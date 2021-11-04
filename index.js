@@ -1,6 +1,6 @@
-const noteCreate = require('./noteCreate')
-const displayNotes = require('./displayNotes');
-const getNotes = require('./getNotes');
+const noteCreate = require('./src/noteCreate')
+const displayNotes = require('./src/displayNotes');
+const getNotes = require('./src/getNotes');
 
 const input = document.querySelector('#noteInput');
 const createbtn = document.querySelector('#noteCreate');

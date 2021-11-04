@@ -3,7 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 // http = require('http'),
-const Notes = require('./notes')
+const Notes = require('./src/notes')
 
 const notePad =  new Notes();
 

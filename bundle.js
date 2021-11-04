@@ -3,9 +3,9 @@
     return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
   };
 
-  // noteCreate.js
+  // src/noteCreate.js
   var require_noteCreate = __commonJS({
-    "noteCreate.js"(exports, module) {
+    "src/noteCreate.js"(exports, module) {
       var noteCreate2 = (content) => {
         fetch("http://localhost:3000/notes", {
           method: "post",
@@ -21,16 +21,18 @@
     }
   });
 
-  // displayNotes.js
+  // src/displayNotes.js
   var require_displayNotes = __commonJS({
-    "displayNotes.js"(exports, module) {
+    "src/displayNotes.js"(exports, module) {
       var displayNotes2 = (fetchedContent) => {
         noteEl = document.getElementById("displayNotes");
         noteEl.innerHTML = "";
         fetchedContent.forEach((object) => {
           let newNote = document.createElement("p");
-          newNote.textContent = object["content"];
-          newNote.className = "newNote";
+          let postCount = document.querySelectorAll(".note").length;
+          newNote.textContent = "* " + object["content"];
+          newNote.className = "note";
+          newNote.id = `note-${postCount + 1}`;
           noteEl = document.getElementById("displayNotes");
           noteEl.appendChild(newNote);
         });
@@ -39,9 +41,9 @@
     }
   });
 
-  // getNotes.js
+  // src/getNotes.js
   var require_getNotes = __commonJS({
-    "getNotes.js"(exports, module) {
+    "src/getNotes.js"(exports, module) {
       var getNotes2 = (callback) => {
         fetch("http://localhost:3000/notes").then((response) => response.json()).then((jsonData) => {
           console.log(jsonData);

@@ -1,4 +1,4 @@
-const Notes = require('./notes')
+const Notes = require('../src/notes')
 
 describe ('Notes', () => {
   it('creates a new note list', () => {
