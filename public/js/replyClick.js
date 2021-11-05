@@ -1,6 +1,5 @@
 function replyClick(clickedId) {
-    getNote(clickedId, displayNote
-    );
+    getNote(clickedId, displayNote);
 }
 
 const getNote = (clickedId, callback) => {
