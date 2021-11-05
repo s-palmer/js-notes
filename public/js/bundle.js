@@ -74,10 +74,14 @@
   var getNotes = require_getNotes();
   var input = document.querySelector("#noteInput");
   var createbtn = document.querySelector("#noteCreate");
+  var viewNotesBtn = document.querySelector("#viewAllNotes");
   getNotes(displayNotes);
   createbtn.addEventListener("click", () => {
     noteCreate(input.value);
     getNotes(displayNotes);
     input.value = "";
+  });
+  viewNotesBtn.addEventListener("click", () => {
+    getNotes(displayNotes);
   });
 })();

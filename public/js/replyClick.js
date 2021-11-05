@@ -22,5 +22,3 @@ const displayNote = (fetchedContent) => {
     newNote.id = `note-${postCount}`;
     noteEl.appendChild(newNote);
     };
-
-// module.exports = replyClick;

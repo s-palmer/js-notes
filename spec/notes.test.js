@@ -34,6 +34,17 @@ describe ('.display', () => {
   });
 })
 
+describe ('.findNote', () => {
+  it('returns a specific note based on an ID',() => {
+    notepad = new Notes();
+    let note1 = {
+      "content": "Hello World"
+    };
+    notepad.newNote(note1);
+    expect(notepad.findNote(0)).toEqual({"content": "Hello World"});
+  });
+})
+
 
 
 
