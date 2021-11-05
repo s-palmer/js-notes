@@ -22,6 +22,13 @@ app.get('/notes/all', function (req, res) {
   res.sendFile('notes.html', {root : __dirname + '/public'});
 })
 
+app.get('/notes/:noteId', function (req, res) {
+  res.send(notePad.findNote(req.params.noteId));
+  console.log(req.params);
+  console.log("noteId is set to " + req.params.noteId);
+  // res.sendFile('displayNote.html', {root : __dirname + '/public'});
+})
+
 app.get('/note/:noteId', function (req, res) {
   res.send(notePad.findNote(req.params.noteId).content);
   console.log(req.params);
@@ -35,5 +42,5 @@ app.post('/notes', function (req, res) {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Server listening at http://localhost:${port}`)
 })
